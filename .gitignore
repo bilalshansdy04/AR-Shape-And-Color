@@ -1,0 +1,7 @@
+Temp/
+Library/
+Obj/
+Logs/
+MemoryCaptures/
+Build/
+/Packages/com.ptc.vuforia.engine-*.tgz
