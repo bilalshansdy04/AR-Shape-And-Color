@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonFunction : MonoBehaviour
 {
@@ -68,5 +69,10 @@ public class ButtonFunction : MonoBehaviour
             buttonObject[i].SetActive(false);
         }
     }}
+
+        public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 }
