@@ -2323,8 +2323,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287451155
+  m_fontColor: {r: 0.07450981, g: 0.3137255, b: 0.5529412, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2725,6 +2725,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708994514}
   m_CullTransparentMesh: 1
+--- !u!1 &1749696517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749696518}
+  - component: {fileID: 1749696520}
+  - component: {fileID: 1749696519}
+  m_Layer: 5
+  m_Name: Answer Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1749696518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749696517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1944133450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 220, y: 220}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1749696519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749696517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1749696520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749696517}
+  m_CullTransparentMesh: 1
 --- !u!1 &1803476440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2885,7 @@ RectTransform:
   - {fileID: 1460573581}
   - {fileID: 1146018352}
   - {fileID: 580025710}
+  - {fileID: 1749696518}
   m_Father: {fileID: 858658431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3052,6 +3128,19 @@ MonoBehaviour:
   basicButtonSprite: {fileID: 21300000, guid: 5a2db0613c0d67b429f70fc52cedb9c2, type: 3}
   teksPertanyaan: {fileID: 1343760918}
   nilai: {fileID: 202097469}
+  gambarJawabanBenar:
+  - {fileID: 21300000, guid: 40f6fb6cea41818429321ccfa851c49e, type: 3}
+  - {fileID: 21300000, guid: c6c98e639e1365b4183d89a022f263fa, type: 3}
+  - {fileID: 21300000, guid: 61f8ddfe5994dec45a0fcd4e4cbb684f, type: 3}
+  - {fileID: 21300000, guid: 88f9fb8ad517029408513ff388921e67, type: 3}
+  - {fileID: 21300000, guid: 0f0e190d6d40be6468f6b11e783746f6, type: 3}
+  gambarJawabanSalah:
+  - {fileID: 21300000, guid: 17d064d8e6511174490994bc603b3a56, type: 3}
+  - {fileID: 21300000, guid: 326c6f200220b5841b5bea152902e62a, type: 3}
+  - {fileID: 21300000, guid: 04c2feeb85d4c7649b294b19e258dabe, type: 3}
+  - {fileID: 21300000, guid: f0d461e4401288a4d83959414bdc19bd, type: 3}
+  - {fileID: 21300000, guid: 8b2e438aa2bdaa545ab0f8b9c1b471ed, type: 3}
+  imageJawaban: {fileID: 1749696519}
 --- !u!4 &2103264543
 Transform:
   m_ObjectHideFlags: 0

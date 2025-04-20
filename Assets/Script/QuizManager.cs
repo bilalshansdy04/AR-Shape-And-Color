@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class QuizManager : MonoBehaviour
 {
@@ -26,12 +27,19 @@ public class QuizManager : MonoBehaviour
     public TextMeshProUGUI teksPertanyaan, nilai;
 
 
+    private HashSet<Sprite> usedLingkaranSprites = new HashSet<Sprite>();
+
     private string jawabanBenar;
     private int indexDipilih = -1;
     private int indexSoal = 0;
     private int skor = 0;
     private string level;
     private List<WarnaData> soalSaatIni;
+
+    [Header("Image Jawaban")]
+    public List<Sprite> gambarJawabanBenar; // Daftar gambar untuk jawaban benar
+    public List<Sprite> gambarJawabanSalah; // Daftar gambar untuk jawaban salah
+    public Image imageJawaban; // Image UI untuk menampilkan gambar
 
     void Start()
     {
@@ -40,15 +48,35 @@ public class QuizManager : MonoBehaviour
     }
 
     void TampilkanSoal()
-{
+    {
     indexDipilih = -1;
 
     // 1. Acak soal & tampilkan pertanyaan
     soalSaatIni = new List<WarnaData>(semuaWarna);
     soalSaatIni.Shuffle();
-    WarnaData soal = soalSaatIni[0];
+
+    WarnaData soal = null;
+    foreach (var warna in soalSaatIni)
+    {
+        if (!usedLingkaranSprites.Contains(warna.spriteLingkaran))
+        {
+            soal = warna;
+            usedLingkaranSprites.Add(warna.spriteLingkaran);
+            break;
+        }
+    }
+
+    // Fallback jika semua sprite sudah dipakai
+    if (soal == null)
+    {
+        usedLingkaranSprites.Clear(); // Reset
+        soal = soalSaatIni[0];
+        usedLingkaranSprites.Add(soal.spriteLingkaran);
+    }
+
     imageLingkaran.sprite = soal.spriteLingkaran;
     jawabanBenar = soal.namaWarna;
+
 
     // 2. Random pertanyaan
     string[] variasiSoal = { "Warna apakah ini?", "Coba tebak warna ini?", "Apa nama warna ini?" };
@@ -125,6 +153,33 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+    private IEnumerator TampilkanGambarJawabanBenar()
+    {
+        int randomIndex = Random.Range(0, gambarJawabanBenar.Count);
+        imageJawaban.sprite = gambarJawabanBenar[randomIndex];
+        imageJawaban.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+
+        imageJawaban.gameObject.SetActive(false);
+        indexSoal++;
+        TampilkanSoal();
+    }
+
+
+    private IEnumerator TampilkanGambarJawabanSalah()
+    {
+        int randomIndex = Random.Range(0, gambarJawabanSalah.Count);
+        imageJawaban.sprite = gambarJawabanSalah[randomIndex];
+        imageJawaban.gameObject.SetActive(true);
+        
+        yield return new WaitForSeconds(2);
+        
+        imageJawaban.gameObject.SetActive(false); 
+        indexSoal++; 
+        TampilkanSoal(); 
+    }
+
     public void SubmitJawaban()
     {
         if (indexDipilih == -1)
@@ -134,28 +189,43 @@ public class QuizManager : MonoBehaviour
         }
 
         string jawabanPemain = teksJawaban[indexDipilih].text;
-        if (jawabanPemain == jawabanBenar)
-        {
-            skor += 20;
-            Debug.Log("Benar! Skor: " + skor);
-        }
-        else
-        {
-            Debug.Log("Salah! Skor: " + skor);
-        }
+        bool benar = jawabanPemain == jawabanBenar;
 
-        indexSoal++;
-        if (indexSoal >= 5)
+        // Cek apakah ini soal terakhir
+        bool soalTerakhir = indexSoal >= 4;
+
+        if (soalTerakhir)
         {
+            if (benar) skor += 20;
+
+            // Langsung tampilkan skor tanpa coroutine
             Debug.Log("Selesai! Skor akhir: " + skor);
-            pointImage.gameObject.SetActive(true);
             nilai.text = skor.ToString();
+            pointImage.gameObject.SetActive(true);
+
+            // Nonaktifkan tombol-tombol jawaban
+            foreach (var tombol in tombolJawaban)
+            {
+                tombol.interactable = false;
+            }
+            tombolSubmit.interactable = false;
         }
         else
         {
-            TampilkanSoal();
+            if (benar)
+            {
+                skor += 20;
+                Debug.Log("Benar! Skor: " + skor);
+                StartCoroutine(TampilkanGambarJawabanBenar());
+            }
+            else
+            {
+                Debug.Log("Salah! Skor: " + skor);
+                StartCoroutine(TampilkanGambarJawabanSalah());
+            }
         }
     }
+
 }
 
 public static class ListExtensions
