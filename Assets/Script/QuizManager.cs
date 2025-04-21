@@ -13,17 +13,22 @@ public class QuizManager : MonoBehaviour
         public string namaWarna;
         public Sprite spriteLingkaran;
         public Sprite spriteButton;
+        public AudioClip suaraButton; // aku tambahin suara button tolong buatkan caranya gimana agar suaranya berdasarkan nama warna aja karena ada difficult sulit yg spritenya tidak sesuai teks jadi tolong suara button nya buat sama dengan teks nya
     }
     [Header("Data Warna")]
     public List<WarnaData> semuaWarna;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip suaraBenar;
+    public AudioClip suaraSalah;
 
     public Image imageLingkaran, pointImage;
     public List<Button> tombolJawaban;
     public List<TextMeshProUGUI> teksJawaban;
     public Button tombolSubmit;
 
-    public Sprite basicButtonSprite; // Untuk level sedang
+    public Sprite basicButtonSprite;
     public TextMeshProUGUI teksPertanyaan, nilai;
 
 
@@ -37,9 +42,9 @@ public class QuizManager : MonoBehaviour
     private List<WarnaData> soalSaatIni;
 
     [Header("Image Jawaban")]
-    public List<Sprite> gambarJawabanBenar; // Daftar gambar untuk jawaban benar
-    public List<Sprite> gambarJawabanSalah; // Daftar gambar untuk jawaban salah
-    public Image imageJawaban; // Image UI untuk menampilkan gambar
+    public List<Sprite> gambarJawabanBenar;
+    public List<Sprite> gambarJawabanSalah;
+    public Image imageJawaban;
 
     void Start()
     {
@@ -151,6 +156,8 @@ public class QuizManager : MonoBehaviour
         {
             tombolJawaban[i].GetComponent<Image>().color = (i == index) ? Color.yellow : Color.white;
         }
+        string warnaDipilih = teksJawaban[index].text;
+        PutarSuaraWarna(warnaDipilih);
     }
 
     private IEnumerator TampilkanGambarJawabanBenar()
@@ -217,14 +224,29 @@ public class QuizManager : MonoBehaviour
                 skor += 20;
                 Debug.Log("Benar! Skor: " + skor);
                 StartCoroutine(TampilkanGambarJawabanBenar());
+                audioSource.PlayOneShot(suaraBenar);
             }
             else
             {
                 Debug.Log("Salah! Skor: " + skor);
                 StartCoroutine(TampilkanGambarJawabanSalah());
+                audioSource.PlayOneShot(suaraSalah);
             }
         }
     }
+    public void PutarSuaraWarna(string namaWarna)
+    {
+        WarnaData data = semuaWarna.Find(w => w.namaWarna == namaWarna);
+        if (data != null && data.suaraButton != null)
+        {
+            audioSource.PlayOneShot(data.suaraButton);
+        }
+        else
+        {
+            Debug.LogWarning("Suara tidak ditemukan untuk warna: " + namaWarna);
+        }
+    }
+
 
 }
 
