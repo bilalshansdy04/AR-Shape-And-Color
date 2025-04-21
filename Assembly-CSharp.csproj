@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\MenuManager.cs" />
     <Compile Include="Assets\Script\ButtonFunction.cs" />
+    <Compile Include="Assets\Script\BacksoundManager.cs" />
     <Compile Include="Assets\Script\ValidationScript.cs" />
     <Compile Include="Assets\Script\DifficultyManager.cs" />
     <Compile Include="Assets\Script\QuizManager.cs" />

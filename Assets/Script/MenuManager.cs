@@ -1,25 +1,24 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float delayBeforeLoad = 0.5f;
+
+    public void mengenalWarna()
     {
-        
+        StartCoroutine(LoadSceneWithDelay("Difficult"));
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AR()
     {
-        
+        StartCoroutine(LoadSceneWithDelay("AR"));
     }
 
-    public void mengenalWarna(){
-        SceneManager.LoadScene("Difficult");
-    }
-
-    public void AR(){
-        SceneManager.LoadScene("AR");
+    private IEnumerator LoadSceneWithDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(delayBeforeLoad); 
+        SceneManager.LoadScene(sceneName);
     }
 }

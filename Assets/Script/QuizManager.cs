@@ -14,6 +14,8 @@ public class QuizManager : MonoBehaviour
         public Sprite spriteLingkaran;
         public Sprite spriteButton;
     }
+    [Header("Data Warna")]
+    public List<WarnaData> semuaWarna;
 
 
     public Image imageLingkaran, pointImage;
@@ -21,8 +23,6 @@ public class QuizManager : MonoBehaviour
     public List<TextMeshProUGUI> teksJawaban;
     public Button tombolSubmit;
 
-    [Header("Data Warna")]
-    public List<WarnaData> semuaWarna;
     public Sprite basicButtonSprite; // Untuk level sedang
     public TextMeshProUGUI teksPertanyaan, nilai;
 
