@@ -53,6 +53,8 @@ public class BacksoundManager : MonoBehaviour
         else if (sceneName == "QuizGame")
         {
             clipToPlay = quizBacksound;
+        }else {
+            audioSource.Stop();
         }
 
         if (clipToPlay != null && audioSource.clip != clipToPlay)
