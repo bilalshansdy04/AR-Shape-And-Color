@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
@@ -22,6 +22,7 @@ public class QuizManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip suaraBenar;
     public AudioClip suaraSalah;
+    public AudioMixer audioMixer;
 
     public Image imageLingkaran, pointImage;
     public List<Button> tombolJawaban;
@@ -239,6 +240,8 @@ public class QuizManager : MonoBehaviour
         WarnaData data = semuaWarna.Find(w => w.namaWarna == namaWarna);
         if (data != null && data.suaraButton != null)
         {
+            // Mengatur volume menggunakan Audio Mixer
+            audioMixer.SetFloat("SFX", 20f); // Atur volume ke +10 dB (atau sesuai kebutuhan)
             audioSource.PlayOneShot(data.suaraButton);
         }
         else

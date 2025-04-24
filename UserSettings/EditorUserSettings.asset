@@ -5,17 +5,20 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    GraphicsSettingsInspector_UserSettings:
+      value: 18134705175a055722080a3115371d4a0d55006876786860616b0471b8b2656eacb72ba5a52a362c3c0ee63201181433fe3e101bf3250b06144ca74c33ea191f058831cb58d5
+      flags: 0
     RecentlyUsedSceneGuid-0:
       value: 555507055d510c0f555a5a72147409444f4e4e7e2d7e7564787a4936e7e2656e
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
+      value: 0000015104055a5858580e7b41715c44124f4c7c2e7e23337d7c4b6bb3e6623e
       flags: 0
     RecentlyUsedSceneGuid-2:
       value: 5406555501540f0e595c5e7413725e44174e1a29297c776228714563b7b9646a
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 0000015104055a5858580e7b41715c44124f4c7c2e7e23337d7c4b6bb3e6623e
+      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
@@ -34,4 +37,6 @@ EditorUserSettings:
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
+  m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
+  m_CompressAssetsOnImport: 1

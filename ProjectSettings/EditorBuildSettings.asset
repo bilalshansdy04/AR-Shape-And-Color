@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuizGame.unity
     guid: 77a3daf54226c1a4a9bce412e8805902
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0278c8ec3ebed2348a20a0244f326a5d, type: 2}
