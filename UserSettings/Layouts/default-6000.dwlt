@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Audio Mixer
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AudioMixerWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,15 +121,15 @@ MonoBehaviour:
     y: 467.2
     width: 1139.2
     height: 249.59998
-  m_MinSize: {x: 51, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 491.2
+    y: 546.4
     width: 1138.2
     height: 223.59998
   m_SerializedDataModeController:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
-    m_LastClickedID: 33532
+    m_LastClickedID: 32572
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
       oldMaxSizes: 
       oldSplitSize: 0
     m_HorizontalSplitter:
-      ID: 194
+      ID: 258
       splitterInitialOffset: 0
       currentActiveSplitter: -1
       realSizes:
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 546.4
+    y: 491.2
     width: 1138.2
     height: 223.59998
   m_SerializedDataModeController:
@@ -512,7 +512,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Audio/Soal
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -522,15 +522,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Audio/Soal
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\AugmantedReality
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 383}
-    m_SelectedIDs: 24840000
-    m_LastClickedID: 33828
+    scrollPos: {x: 0, y: 308.40002}
+    m_SelectedIDs: 50ce0000
+    m_LastClickedID: 52816
     m_ExpandedIDs: 0000000070810000728100007481000076810000788100007a810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -588,8 +588,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000000000000089000000e900000329000002c900000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000000000000089000000e900000329000002c9000003c7f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,7 +708,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 02ecffff1aecffff56eeffff6aeeffff46f3ffff60f3ffff9ef3ffffb2f3ffffc0f3ffff8ef8ffff96f8ffff62f9ffff1afbffff
+      m_ExpandedIDs: cea3ffffe6a3ffff20a6ffff32a6ffff0cabffff24abffff5aabffff6cabffff78abffff44b0ffff4ab0ffffe2b0ffffe0b2ffff10b7ffff56b7ffff1cbeffffc0c5ffff88c9ffff84ccffff2ad1ffff88d1ffff2ed3ffff64d3ffffb8d5ffffd2deffffeadeffff26e1ffff3ae1ffff16e6ffff30e6ffff60e6ffff74e6ffff82e6ffff50ebffff58ebffffa0edffffc0f3ffff12f4ffff94f4ffffecf4ffff38f5ffff82f5ffffccf5ffff7cf7fffffaf7ffffbef9ffff24fbffff32950000949500000ec1000038c1000074c50000a0c60000bac60000cac60000f0c7000002c8000038c800009ac8000064cb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1270,9 +1270,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 897.97046, y: 447.49115, z: 0}
+    m_Target: {x: 895.3095, y: 517.53394, z: -476.1065}
     speed: 2
-    m_Value: {x: 897.97046, y: 447.49115, z: 0}
+    m_Value: {x: 895.3095, y: 517.53394, z: -476.1065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1322,9 +1322,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 516.07697
+    m_Target: 527.76935
     speed: 2
-    m_Value: 516.07697
+    m_Value: 527.76935
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1438,7 +1438,7 @@ MonoBehaviour:
       y: 21
       width: 929.99994
       height: 420.2
-    m_Scale: {x: 1.25, y: 1.25}
+    m_Scale: {x: 0.4863426, y: 0.4863426}
     m_Translation: {x: 464.99997, y: 210.1}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1446,10 +1446,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -371.99997
-      y: -168.08
-      width: 743.99994
-      height: 336.16
+      x: -956.116
+      y: -432
+      width: 1912.232
+      height: 864
     m_MinimalGUI: 1
   m_defaultScale: 0.4863426
   m_LastWindowPixelSize: {x: 929.99994, y: 441.2}

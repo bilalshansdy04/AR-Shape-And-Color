@@ -3247,7 +3247,7 @@ MonoBehaviour:
   - namaWarna: Kuning
     spriteLingkaran: {fileID: 21300000, guid: 8879ec0d9a1cc744fb942355755e6d8f, type: 3}
     spriteButton: {fileID: 21300000, guid: f148b216dfdb01443bfa943b8e3c5c70, type: 3}
-    suaraButton: {fileID: 8300000, guid: 3d21e6d47822c1c4d848d6f59e650d33, type: 3}
+    suaraButton: {fileID: 8300000, guid: 23544b1b116765242ae7fb2c6a7c5315, type: 3}
   - namaWarna: Merah
     spriteLingkaran: {fileID: 21300000, guid: 0e34c2e87c39983489689dca36fbc630, type: 3}
     spriteButton: {fileID: 21300000, guid: b8a5c8039a993e44eb78b173e87bbc18, type: 3}
@@ -3260,6 +3260,13 @@ MonoBehaviour:
     spriteLingkaran: {fileID: 21300000, guid: 8cdd469ff63ea17448a5449b0b5788da, type: 3}
     spriteButton: {fileID: 21300000, guid: 3f08fed7660056343b29df2b63c40b56, type: 3}
     suaraButton: {fileID: 8300000, guid: 913ff926050e2be41a686826c0ca77fb, type: 3}
+  variasiSoalList:
+  - teksPertanyaan: Warna Apakah Ini?
+    audioPertanyaan: {fileID: 8300000, guid: afab42b207b2562469cc6edc7b6e3e20, type: 3}
+  - teksPertanyaan: Coba Tebak Warna Ini?
+    audioPertanyaan: {fileID: 8300000, guid: 9752b840d7313654792b9c9092ac716a, type: 3}
+  - teksPertanyaan: Apa Nama Warna Ini?
+    audioPertanyaan: {fileID: 8300000, guid: d98d4a55738bd1140a043424f0914acd, type: 3}
   audioSource: {fileID: 1953398910}
   suaraBenar: {fileID: 8300000, guid: 3bd83af2b4bfcbf449ad27b12ba57fc1, type: 3}
   suaraSalah: {fileID: 8300000, guid: 95589c98787dc8f40bfe1a9cb69e14ef, type: 3}
