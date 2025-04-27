@@ -499,8 +499,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -901,8 +901,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Answer 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1005,8 +1005,8 @@ RectTransform:
   m_GameObject: {fileID: 580025709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.65, y: 1.65, z: 1.65}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 202097468}
   - {fileID: 153144601}
@@ -1114,8 +1114,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Answer 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1350,14 +1350,14 @@ RectTransform:
   m_GameObject: {fileID: 837858791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 858658431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -14, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837858793
@@ -1825,8 +1825,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Answer 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1856,7 +1856,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2038,8 +2038,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Answer 4
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2325,8 +2325,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Warna apakah ini?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2350,13 +2350,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2583,10 +2583,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Submit
+  m_text: Pilih
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
-  m_sharedMaterial: {fileID: -2060058029557194758, guid: cd5b42c0663e9944e97c7fe97b509661, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
+  m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2970,7 +2970,7 @@ AudioSource:
   m_GameObject: {fileID: 1953398909}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 8b4be264bc38aca4dadab16603c28a3a, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -3239,27 +3239,34 @@ MonoBehaviour:
   - namaWarna: Biru
     spriteLingkaran: {fileID: 21300000, guid: 1be359253984f4b43a44092437034c6a, type: 3}
     spriteButton: {fileID: 21300000, guid: 67f6673736f3b8f4ca4b19e34dd6f4e7, type: 3}
-    suaraButton: {fileID: 8300000, guid: 8a8ac74b8af25f047a211755c4843b07, type: 3}
+    suaraButton: {fileID: 8300000, guid: 5b8b6e514dc86474bb783dc3467351ec, type: 3}
   - namaWarna: Hijau
     spriteLingkaran: {fileID: 21300000, guid: 7feda20e20008d2439a4771e967cb884, type: 3}
     spriteButton: {fileID: 21300000, guid: d2158e6a12370564f811e5e1e1e8ca6e, type: 3}
-    suaraButton: {fileID: 8300000, guid: 61cdcfe635edff04ba18dd735c2ff899, type: 3}
+    suaraButton: {fileID: 8300000, guid: a7af254eed7bcdd47b2e23a9793c74f2, type: 3}
   - namaWarna: Kuning
-    spriteLingkaran: {fileID: 21300000, guid: 891fe2677a7eb254b9e23615b0f64a4c, type: 3}
+    spriteLingkaran: {fileID: 21300000, guid: 8879ec0d9a1cc744fb942355755e6d8f, type: 3}
     spriteButton: {fileID: 21300000, guid: f148b216dfdb01443bfa943b8e3c5c70, type: 3}
-    suaraButton: {fileID: 8300000, guid: 3d21e6d47822c1c4d848d6f59e650d33, type: 3}
+    suaraButton: {fileID: 8300000, guid: 23544b1b116765242ae7fb2c6a7c5315, type: 3}
   - namaWarna: Merah
     spriteLingkaran: {fileID: 21300000, guid: 0e34c2e87c39983489689dca36fbc630, type: 3}
     spriteButton: {fileID: 21300000, guid: b8a5c8039a993e44eb78b173e87bbc18, type: 3}
-    suaraButton: {fileID: 8300000, guid: 275f564c38b47df4f8d5b4383179ea2b, type: 3}
+    suaraButton: {fileID: 8300000, guid: 0d0df031ee69cdb4badeaa998ad50157, type: 3}
   - namaWarna: Oranye
     spriteLingkaran: {fileID: 21300000, guid: 570c5fb7b6483f34888ab1da21cd6f9d, type: 3}
     spriteButton: {fileID: 21300000, guid: a173f1a75cb70ae44a674fa2d3dc5b19, type: 3}
-    suaraButton: {fileID: 8300000, guid: ddcccc76a24bfe6488a991fc96021396, type: 3}
+    suaraButton: {fileID: 8300000, guid: 869f2490bc4f5fe49aec9bcee4a19e36, type: 3}
   - namaWarna: Ungu
     spriteLingkaran: {fileID: 21300000, guid: 8cdd469ff63ea17448a5449b0b5788da, type: 3}
     spriteButton: {fileID: 21300000, guid: 3f08fed7660056343b29df2b63c40b56, type: 3}
-    suaraButton: {fileID: 8300000, guid: 41a4dce023c8337449216bc934fe47a0, type: 3}
+    suaraButton: {fileID: 8300000, guid: 913ff926050e2be41a686826c0ca77fb, type: 3}
+  variasiSoalList:
+  - teksPertanyaan: Warna Apakah Ini?
+    audioPertanyaan: {fileID: 8300000, guid: afab42b207b2562469cc6edc7b6e3e20, type: 3}
+  - teksPertanyaan: Coba Tebak Warna Ini?
+    audioPertanyaan: {fileID: 8300000, guid: 9752b840d7313654792b9c9092ac716a, type: 3}
+  - teksPertanyaan: Apa Nama Warna Ini?
+    audioPertanyaan: {fileID: 8300000, guid: d98d4a55738bd1140a043424f0914acd, type: 3}
   audioSource: {fileID: 1953398910}
   suaraBenar: {fileID: 8300000, guid: 3bd83af2b4bfcbf449ad27b12ba57fc1, type: 3}
   suaraSalah: {fileID: 8300000, guid: 95589c98787dc8f40bfe1a9cb69e14ef, type: 3}

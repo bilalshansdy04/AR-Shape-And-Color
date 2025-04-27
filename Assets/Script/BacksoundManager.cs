@@ -11,9 +11,9 @@ public class BacksoundManager : MonoBehaviour
     private AudioSource audioSource;
     private string currentSceneName = "";
     
-    [Range(0f, 1f)]
-    public float generalVolume = 1f; 
-    public float quizVolumeMultiplier = 1f; 
+    // [Range(0f, 1f)]
+    // public float generalVolume = 1f; 
+    // public float quizVolumeMultiplier = 0.9f; 
 
     void Awake()
     {
@@ -53,12 +53,17 @@ public class BacksoundManager : MonoBehaviour
         if (sceneName == "Menu" || sceneName == "Difficult")
         {
             clipToPlay = menuBacksound;
-            audioSource.volume = generalVolume;
+            // audioSource.volume = generalVolume;
         }
         else if (sceneName == "QuizGame")
         {
             clipToPlay = quizBacksound;
-            audioSource.volume = generalVolume * quizVolumeMultiplier;
+            // audioSource.volume = generalVolume * quizVolumeMultiplier;
+        }else if (sceneName == "AR") 
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            return;
         }
 
         if (clipToPlay != null && audioSource.clip != clipToPlay)

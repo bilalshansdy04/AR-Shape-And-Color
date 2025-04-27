@@ -8,6 +8,12 @@ using System.Collections;
 public class QuizManager : MonoBehaviour
 {
     [System.Serializable]
+    public class VariasiSoal
+    {
+        public string teksPertanyaan;
+        public AudioClip audioPertanyaan;
+    }
+    [System.Serializable]
     public class WarnaData
     {
         public string namaWarna;
@@ -18,11 +24,13 @@ public class QuizManager : MonoBehaviour
     [Header("Data Warna")]
     public List<WarnaData> semuaWarna;
 
+    [Header("Variasi Soal")]
+    public List<VariasiSoal> variasiSoalList;
+
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip suaraBenar;
     public AudioClip suaraSalah;
-    public AudioMixer audioMixer;
 
     public Image imageLingkaran, pointImage;
     public List<Button> tombolJawaban;
@@ -85,10 +93,11 @@ public class QuizManager : MonoBehaviour
 
 
     // 2. Random pertanyaan
-    string[] variasiSoal = { "Warna apakah ini?", "Coba tebak warna ini?", "Apa nama warna ini?" };
-    string pertanyaanDipilih = variasiSoal[Random.Range(0, variasiSoal.Length)];
-    // Asumsikan ada TMP Text di UI bernama teksPertanyaan
-    teksPertanyaan.text = pertanyaanDipilih;
+    // Pilih variasi soal secara acak
+    VariasiSoal variasiDipilih = variasiSoalList[Random.Range(0, variasiSoalList.Count)];
+    teksPertanyaan.text = variasiDipilih.teksPertanyaan;
+    StartCoroutine(PutarAudioSoalDenganDelay(variasiDipilih.audioPertanyaan, 0.95f));
+
 
     // 3. Siapkan pilihan
     List<WarnaData> pilihan = new List<WarnaData> { soal };
@@ -148,6 +157,16 @@ public class QuizManager : MonoBehaviour
         tombolJawaban[i].GetComponent<Image>().color = Color.white;
     }
 }
+    private IEnumerator PutarAudioSoalDenganDelay(AudioClip clip, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
 
     public void PilihJawaban(int index)
     {
@@ -240,8 +259,6 @@ public class QuizManager : MonoBehaviour
         WarnaData data = semuaWarna.Find(w => w.namaWarna == namaWarna);
         if (data != null && data.suaraButton != null)
         {
-            // Mengatur volume menggunakan Audio Mixer
-            audioMixer.SetFloat("SFX", 20f); // Atur volume ke +10 dB (atau sesuai kebutuhan)
             audioSource.PlayOneShot(data.suaraButton);
         }
         else
