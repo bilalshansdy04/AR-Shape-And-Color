@@ -241,7 +241,7 @@ public class QuizManager : MonoBehaviour
         if (data != null && data.suaraButton != null)
         {
             // Mengatur volume menggunakan Audio Mixer
-            audioMixer.SetFloat("SFX", 20f); // Atur volume ke +10 dB (atau sesuai kebutuhan)
+            audioMixer.SetFloat("SFX", 20f); 
             audioSource.PlayOneShot(data.suaraButton);
         }
         else
