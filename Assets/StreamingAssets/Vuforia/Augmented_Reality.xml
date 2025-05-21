@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="trapesium" size="0.085000 0.113046" />
+    <ImageTarget name="segitiga" size="0.085000 0.113046" />
+    <ImageTarget name="segilima" size="0.085000 0.113046" />
+    <ImageTarget name="segienam" size="0.085000 0.113046" />
+    <ImageTarget name="persegi" size="0.085000 0.113046" />
+    <ImageTarget name="persegipanjang" size="0.085000 0.113046" />
+    <ImageTarget name="oval" size="0.085000 0.113046" />
+    <ImageTarget name="lingkaran" size="0.085000 0.113046" />
+    <ImageTarget name="layanglayang" size="0.085000 0.113046" />
+    <ImageTarget name="jajargenjang" size="0.085000 0.113046" />
+    <ImageTarget name="bintang" size="0.085000 0.113046" />
+    <ImageTarget name="belahketupat" size="0.085000 0.113046" />
+  </Tracking>
+</QCARConfig>
