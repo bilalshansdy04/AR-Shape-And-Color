@@ -35,7 +35,7 @@ Aplikasi ini dikembangkan menggunakan **Unity** dan bertujuan membantu meningkat
 
 1. **Clone repository:**
    ```bash
-   git clone https://github.com/username/ar-colorlearn.git
+   git clone https://github.com/bilalshansdy04/AR-Shape-And-Color.git
 
 
 2. **Buka dengan Unity:**
