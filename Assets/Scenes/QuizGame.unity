@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Warna apakah ini?
+  m_text: Layout Soal
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
   m_sharedMaterial: {fileID: -8938376046079540959, guid: b9c41aff7efe31d4bb10681b392b1336, type: 2}
@@ -2843,6 +2843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseImage: {fileID: 1146018350}
+  validationExit: {fileID: 0}
 --- !u!4 &1803476442
 Transform:
   m_ObjectHideFlags: 0
@@ -3270,7 +3271,6 @@ MonoBehaviour:
   audioSource: {fileID: 1953398910}
   suaraBenar: {fileID: 8300000, guid: 3bd83af2b4bfcbf449ad27b12ba57fc1, type: 3}
   suaraSalah: {fileID: 8300000, guid: 95589c98787dc8f40bfe1a9cb69e14ef, type: 3}
-  audioMixer: {fileID: 24100000, guid: 8b4be264bc38aca4dadab16603c28a3a, type: 2}
   imageLingkaran: {fileID: 1216392518}
   pointImage: {fileID: 580025711}
   tombolJawaban:

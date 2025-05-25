@@ -403,11 +403,11 @@ MonoBehaviour:
   mTrackableName: bintang_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 841d9385f77241a7aff39968b2bef170, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: f1cf025485aa49a98890a9ffb5385c71, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1527,11 +1527,11 @@ MonoBehaviour:
   mTrackableName: persegi_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 44e4840c13034e5a8649818f438305f7, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: e4f7b9473415408390fb9de366b8c770, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3562,11 +3562,11 @@ MonoBehaviour:
   mTrackableName: jajargenjang_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 2a686fd323804313b1a9310a4cca5628, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 2029c9cdd105404eb8db110d84c3ee92, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3717,11 +3717,11 @@ MonoBehaviour:
   mTrackableName: belahketupat_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 79e1409adab248a1b1b31fe7875f0563, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 8f283fe5202c47a085aacb0501f194bc, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -4313,11 +4313,11 @@ MonoBehaviour:
   mTrackableName: segienam_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: fbdfcf51d65e4c01b17dc62539670ee3, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 84b4119ee4104b28a8902b886e543aee, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -5112,11 +5112,11 @@ MonoBehaviour:
   mTrackableName: trapesium_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: e6d084bc9fb340108c80d0f84191904b, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: e47dc2165dd743b588516758ab423f7f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -5617,11 +5617,11 @@ MonoBehaviour:
   mTrackableName: lingkaran_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 2d5a8f37919649aea74158910a6a9895, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 6fa041aeab1e4114b40a98004ec65f43, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -6061,11 +6061,11 @@ MonoBehaviour:
   mTrackableName: segilima_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 33bc8203d1674b4d8e768ee5a25d2000, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 2afe1581fb4d416e89e4bfe6b46018f1, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -6562,11 +6562,11 @@ MonoBehaviour:
   mTrackableName: persegipanjang_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1ff0c4893c35433b83c280bbad57dd17, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 761daf35d9884c2cabc33f691bd89872, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -7297,11 +7297,11 @@ MonoBehaviour:
   mTrackableName: oval_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: c6503a686f1549d2a49b33e9613c96c4, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: a65bf2640efc4c8a8c6adb5442c94e26, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -7932,11 +7932,11 @@ MonoBehaviour:
   mTrackableName: segitiga_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 977917df15ec45c7a8657154cfd180cd, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 44574c851ea740ea8f190d2129be0a21, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -8086,11 +8086,11 @@ MonoBehaviour:
   mTrackableName: layanglayang_scaled
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.3299493
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.15038168
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: e0a30949efe54e7fb5ab71fddfd47564, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: d86a0eb0410345a38bd8029c1366d503, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
