@@ -1,12 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
 
 public class QuizManager : MonoBehaviour
 {
+    [System.Serializable]
+    public class VariasiSoal
+    {
+        public string teksPertanyaan;
+        public AudioClip audioPertanyaan;
+    }
     [System.Serializable]
     public class WarnaData
     {
@@ -17,6 +23,9 @@ public class QuizManager : MonoBehaviour
     }
     [Header("Data Warna")]
     public List<WarnaData> semuaWarna;
+
+    [Header("Variasi Soal")]
+    public List<VariasiSoal> variasiSoalList;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -84,10 +93,11 @@ public class QuizManager : MonoBehaviour
 
 
     // 2. Random pertanyaan
-    string[] variasiSoal = { "Warna apakah ini?", "Coba tebak warna ini?", "Apa nama warna ini?" };
-    string pertanyaanDipilih = variasiSoal[Random.Range(0, variasiSoal.Length)];
-    // Asumsikan ada TMP Text di UI bernama teksPertanyaan
-    teksPertanyaan.text = pertanyaanDipilih;
+    // Pilih variasi soal secara acak
+    VariasiSoal variasiDipilih = variasiSoalList[Random.Range(0, variasiSoalList.Count)];
+    teksPertanyaan.text = variasiDipilih.teksPertanyaan;
+    StartCoroutine(PutarAudioSoalDenganDelay(variasiDipilih.audioPertanyaan, 0.95f));
+
 
     // 3. Siapkan pilihan
     List<WarnaData> pilihan = new List<WarnaData> { soal };
@@ -147,6 +157,16 @@ public class QuizManager : MonoBehaviour
         tombolJawaban[i].GetComponent<Image>().color = Color.white;
     }
 }
+    private IEnumerator PutarAudioSoalDenganDelay(AudioClip clip, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
 
     public void PilihJawaban(int index)
     {

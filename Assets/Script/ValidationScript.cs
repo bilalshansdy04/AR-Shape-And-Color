@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ValidationScript : MonoBehaviour
 {
     public Image pauseImage;
+    public Image validationExit;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,21 @@ public class ValidationScript : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ExitOnClick(){
+        validationExit.gameObject.SetActive(true);
+    }
+    public void ResumeOnClick(){
+        validationExit.gameObject.SetActive(false);
+    }
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+            Debug.Log("Game exited");
+        #else
+            Application.Quit();
+        #endif
     }
 
 }
