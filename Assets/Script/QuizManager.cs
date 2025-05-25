@@ -65,7 +65,7 @@ public class QuizManager : MonoBehaviour
     {
     indexDipilih = -1;
 
-    // 1. Acak soal & tampilkan pertanyaan
+    // Acak list warna dan pilih soal
     soalSaatIni = new List<WarnaData>(semuaWarna);
     soalSaatIni.Shuffle();
 
@@ -80,10 +80,9 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    // Fallback jika semua sprite sudah dipakai
     if (soal == null)
     {
-        usedLingkaranSprites.Clear(); // Reset
+        usedLingkaranSprites.Clear();
         soal = soalSaatIni[0];
         usedLingkaranSprites.Add(soal.spriteLingkaran);
     }
@@ -91,15 +90,12 @@ public class QuizManager : MonoBehaviour
     imageLingkaran.sprite = soal.spriteLingkaran;
     jawabanBenar = soal.namaWarna;
 
-
-    // 2. Random pertanyaan
-    // Pilih variasi soal secara acak
+    // Ambil pertanyaan acak dan mainkan audionya
     VariasiSoal variasiDipilih = variasiSoalList[Random.Range(0, variasiSoalList.Count)];
     teksPertanyaan.text = variasiDipilih.teksPertanyaan;
     StartCoroutine(PutarAudioSoalDenganDelay(variasiDipilih.audioPertanyaan, 0.95f));
 
-
-    // 3. Siapkan pilihan
+    // Siapkan pilihan jawaban
     List<WarnaData> pilihan = new List<WarnaData> { soal };
     for (int i = 1; i < semuaWarna.Count && pilihan.Count < 4; i++)
     {
@@ -110,11 +106,10 @@ public class QuizManager : MonoBehaviour
     }
     pilihan.Shuffle();
 
-    // 4. Tampilkan tombol & sprite sesuai level
-    List<WarnaData> spriteAcakUnik = new List<WarnaData>(semuaWarna);
-    spriteAcakUnik.RemoveAll(w => pilihan.Exists(p => p.namaWarna == w.namaWarna));
-    spriteAcakUnik.Shuffle();
-
+    AturTampilanJawabanBerdasarkanLevel(pilihan);
+    }
+    void AturTampilanJawabanBerdasarkanLevel(List<WarnaData> pilihan)
+    {
     for (int i = 0; i < tombolJawaban.Count; i++)
     {
         teksJawaban[i].text = pilihan[i].namaWarna;
@@ -130,33 +125,23 @@ public class QuizManager : MonoBehaviour
                 break;
 
             case "Sulit":
-                // Buat daftar untuk menyimpan sprite yang sudah digunakan
-                HashSet<Sprite> usedSprites = new HashSet<Sprite>();
-
-                for (int j = 0; j < tombolJawaban.Count; j++)
+                WarnaData acak;
+                Sprite spriteUnik;
+                do
                 {
-                    // Set sprite untuk tombol saat ini
-                    if (j < pilihan.Count)
-                    {
-                        // Pilih sprite yang berbeda dari jawaban benar
-                        WarnaData acak;
-                        do
-                        {
-                            acak = semuaWarna[Random.Range(0, semuaWarna.Count)];
-                        } while (acak.namaWarna == jawabanBenar || usedSprites.Contains(acak.spriteButton));
-
-                        tombolJawaban[j].image.sprite = acak.spriteButton;
-                        usedSprites.Add(acak.spriteButton);
-                    }
-
-                    teksJawaban[j].text = pilihan[j].namaWarna;
+                    acak = semuaWarna[Random.Range(0, semuaWarna.Count)];
+                    spriteUnik = acak.spriteButton;
                 }
+                while (acak.namaWarna == jawabanBenar);
+
+                tombolJawaban[i].image.sprite = spriteUnik;
                 break;
         }
 
         tombolJawaban[i].GetComponent<Image>().color = Color.white;
+     }
     }
-}
+
     private IEnumerator PutarAudioSoalDenganDelay(AudioClip clip, float delay)
     {
         yield return new WaitForSeconds(delay);
