@@ -10,6 +10,7 @@ public class ButtonFunction : MonoBehaviour
     {
         public GameObject obj;
         public AudioClip audioObject;
+        public AudioClip audioObjectEnglish;
     }
 
     [System.Serializable]
@@ -22,6 +23,7 @@ public class ButtonFunction : MonoBehaviour
     public GameObject[] basicObject;           // Marker dasar
     public GameObject[] buttonObject;    
     public GameObject playAudioButton;       // Tombol UI
+    public GameObject playEnglishAudioButton; 
     public AudioSource audioSource;            // Pemutar audio
 
     private GameObject targetAr;
@@ -33,19 +35,25 @@ public class ButtonFunction : MonoBehaviour
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
         if (playAudioButton != null)
             playAudioButton.SetActive(false);
+
+        if (playEnglishAudioButton != null)
+            playEnglishAudioButton.SetActive(false);
     }
 
     public void OnTargetFound(GameObject target)
     {
         targetAr = target;
         CheckTotalObject();
-        
+
         currentObjectIndex = 0;
         ButtonChangeObject(0);
 
         // Tampilkan tombol play audio
         if (playAudioButton != null)
             playAudioButton.SetActive(true);
+            
+        if (playEnglishAudioButton != null)
+            playEnglishAudioButton.SetActive(true);
     }
 
     public void OnTargetLost()
@@ -65,6 +73,12 @@ public class ButtonFunction : MonoBehaviour
         {
             audioSource.Stop();
         }
+
+        if (playAudioButton != null)
+            playAudioButton.SetActive(false);
+
+        if (playEnglishAudioButton != null)
+            playEnglishAudioButton.SetActive(false);
     }
 
     void CheckTotalObject()
@@ -112,6 +126,16 @@ public class ButtonFunction : MonoBehaviour
         if (currentObjectIndex >= 0 && currentObjectIndex < objekList.Length)
         {
             PlayAudio(objekList[currentObjectIndex].audioObject);
+        }
+    }
+
+        public void PlayCurrentAudioEnglish() 
+    {
+        var objekList = objectArs[indexObjectActive].objectLainnyas;
+        if (currentObjectIndex >= 0 && currentObjectIndex < objekList.Length)
+        {
+            AudioClip clip = objekList[currentObjectIndex].audioObjectEnglish;
+            PlayAudio(clip);
         }
     }
 

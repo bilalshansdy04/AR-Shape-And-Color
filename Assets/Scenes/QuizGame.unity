@@ -675,9 +675,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1629,9 +1629,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2843,6 +2843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseImage: {fileID: 1146018350}
+  validationExit: {fileID: 0}
 --- !u!4 &1803476442
 Transform:
   m_ObjectHideFlags: 0
@@ -3172,9 +3173,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.79622644, g: 0.79622644, b: 0.79622644, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3239,38 +3240,37 @@ MonoBehaviour:
   - namaWarna: Biru
     spriteLingkaran: {fileID: 21300000, guid: 1be359253984f4b43a44092437034c6a, type: 3}
     spriteButton: {fileID: 21300000, guid: 67f6673736f3b8f4ca4b19e34dd6f4e7, type: 3}
-    suaraButton: {fileID: 8300000, guid: 5b8b6e514dc86474bb783dc3467351ec, type: 3}
+    suaraButton: {fileID: 8300000, guid: f158e450296b75141a55bc588616f859, type: 3}
   - namaWarna: Hijau
     spriteLingkaran: {fileID: 21300000, guid: 7feda20e20008d2439a4771e967cb884, type: 3}
     spriteButton: {fileID: 21300000, guid: d2158e6a12370564f811e5e1e1e8ca6e, type: 3}
-    suaraButton: {fileID: 8300000, guid: a7af254eed7bcdd47b2e23a9793c74f2, type: 3}
+    suaraButton: {fileID: 8300000, guid: b4c311efd0f8f1749b7bafd1f4c2be96, type: 3}
   - namaWarna: Kuning
     spriteLingkaran: {fileID: 21300000, guid: 8879ec0d9a1cc744fb942355755e6d8f, type: 3}
     spriteButton: {fileID: 21300000, guid: f148b216dfdb01443bfa943b8e3c5c70, type: 3}
-    suaraButton: {fileID: 8300000, guid: 23544b1b116765242ae7fb2c6a7c5315, type: 3}
+    suaraButton: {fileID: 8300000, guid: b15b0767a38eafa4daab84dc7ba2c1a4, type: 3}
   - namaWarna: Merah
     spriteLingkaran: {fileID: 21300000, guid: 0e34c2e87c39983489689dca36fbc630, type: 3}
     spriteButton: {fileID: 21300000, guid: b8a5c8039a993e44eb78b173e87bbc18, type: 3}
-    suaraButton: {fileID: 8300000, guid: 0d0df031ee69cdb4badeaa998ad50157, type: 3}
+    suaraButton: {fileID: 8300000, guid: aaea1c97694f68646a265d662c6c7e2d, type: 3}
   - namaWarna: Oranye
     spriteLingkaran: {fileID: 21300000, guid: 570c5fb7b6483f34888ab1da21cd6f9d, type: 3}
     spriteButton: {fileID: 21300000, guid: a173f1a75cb70ae44a674fa2d3dc5b19, type: 3}
-    suaraButton: {fileID: 8300000, guid: 869f2490bc4f5fe49aec9bcee4a19e36, type: 3}
+    suaraButton: {fileID: 8300000, guid: 0a56f476de3287041ae202bd62a7663c, type: 3}
   - namaWarna: Ungu
     spriteLingkaran: {fileID: 21300000, guid: 8cdd469ff63ea17448a5449b0b5788da, type: 3}
     spriteButton: {fileID: 21300000, guid: 3f08fed7660056343b29df2b63c40b56, type: 3}
-    suaraButton: {fileID: 8300000, guid: 913ff926050e2be41a686826c0ca77fb, type: 3}
+    suaraButton: {fileID: 8300000, guid: b8899ce27f304324aaecd4bcc3743917, type: 3}
   variasiSoalList:
   - teksPertanyaan: Warna Apakah Ini?
-    audioPertanyaan: {fileID: 8300000, guid: afab42b207b2562469cc6edc7b6e3e20, type: 3}
+    audioPertanyaan: {fileID: 8300000, guid: d74cda7f963fe3c409b8064ff69aff40, type: 3}
   - teksPertanyaan: Coba Tebak Warna Ini?
-    audioPertanyaan: {fileID: 8300000, guid: 9752b840d7313654792b9c9092ac716a, type: 3}
+    audioPertanyaan: {fileID: 8300000, guid: 010fe2617ae31364b9c42edf702aebba, type: 3}
   - teksPertanyaan: Apa Nama Warna Ini?
-    audioPertanyaan: {fileID: 8300000, guid: d98d4a55738bd1140a043424f0914acd, type: 3}
+    audioPertanyaan: {fileID: 8300000, guid: 2199ddadfce18b3498cee52485df3019, type: 3}
   audioSource: {fileID: 1953398910}
   suaraBenar: {fileID: 8300000, guid: 3bd83af2b4bfcbf449ad27b12ba57fc1, type: 3}
   suaraSalah: {fileID: 8300000, guid: 95589c98787dc8f40bfe1a9cb69e14ef, type: 3}
-  audioMixer: {fileID: 24100000, guid: 8b4be264bc38aca4dadab16603c28a3a, type: 2}
   imageLingkaran: {fileID: 1216392518}
   pointImage: {fileID: 580025711}
   tombolJawaban:
@@ -3414,9 +3414,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    m_SelectedColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

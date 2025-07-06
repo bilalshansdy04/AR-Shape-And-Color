@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
 
 public class QuizManager : MonoBehaviour
 {
+     private bool sudahSubmit = false;
     [System.Serializable]
     public class VariasiSoal
     {
@@ -115,46 +115,53 @@ public class QuizManager : MonoBehaviour
     spriteAcakUnik.RemoveAll(w => pilihan.Exists(p => p.namaWarna == w.namaWarna));
     spriteAcakUnik.Shuffle();
 
-    for (int i = 0; i < tombolJawaban.Count; i++)
-    {
-        teksJawaban[i].text = pilihan[i].namaWarna;
-
-        switch (level)
+        for (int i = 0; i < tombolJawaban.Count; i++)
         {
-            case "Mudah":
-                tombolJawaban[i].image.sprite = pilihan[i].spriteButton;
-                break;
+            teksJawaban[i].text = pilihan[i].namaWarna;
 
-            case "Sedang":
-                tombolJawaban[i].image.sprite = basicButtonSprite;
-                break;
+            switch (level)
+            {
+                case "Mudah":
+                    tombolJawaban[i].image.sprite = pilihan[i].spriteButton;
+                    break;
 
-            case "Sulit":
-                // Buat daftar untuk menyimpan sprite yang sudah digunakan
-                HashSet<Sprite> usedSprites = new HashSet<Sprite>();
+                case "Sedang":
+                    tombolJawaban[i].image.sprite = basicButtonSprite;
+                    break;
 
-                for (int j = 0; j < tombolJawaban.Count; j++)
-                {
-                    // Set sprite untuk tombol saat ini
-                    if (j < pilihan.Count)
+                case "Sulit":
+                    // Buat daftar untuk menyimpan sprite yang sudah digunakan
+                    HashSet<Sprite> usedSprites = new HashSet<Sprite>();
+
+                    for (int j = 0; j < tombolJawaban.Count; j++)
                     {
-                        // Pilih sprite yang berbeda dari jawaban benar
-                        WarnaData acak;
-                        do
+                        // Set sprite untuk tombol saat ini
+                        if (j < pilihan.Count)
                         {
-                            acak = semuaWarna[Random.Range(0, semuaWarna.Count)];
-                        } while (acak.namaWarna == jawabanBenar || usedSprites.Contains(acak.spriteButton));
+                            // Pilih sprite yang berbeda dari jawaban benar
+                            WarnaData acak;
+                            do
+                            {
+                                acak = semuaWarna[Random.Range(0, semuaWarna.Count)];
+                            } while (acak.namaWarna == jawabanBenar || usedSprites.Contains(acak.spriteButton));
 
-                        tombolJawaban[j].image.sprite = acak.spriteButton;
-                        usedSprites.Add(acak.spriteButton);
+                            tombolJawaban[j].image.sprite = acak.spriteButton;
+                            usedSprites.Add(acak.spriteButton);
+                        }
+
+                        teksJawaban[j].text = pilihan[j].namaWarna;
                     }
+                    break;
+            }
 
-                    teksJawaban[j].text = pilihan[j].namaWarna;
-                }
-                break;
-        }
+            var btn = tombolJawaban[i];
+            var colors = btn.colors;
+            colors.normalColor    = Color.white;
+            colors.highlightedColor = new Color(0.9f, 0.9f, 0.9f, 1f);
+            colors.pressedColor     = new Color(0.8f, 0.8f, 0.8f, 1f);
+            colors.disabledColor    = new Color(0.5f, 0.5f, 0.5f, 1f);
 
-        tombolJawaban[i].GetComponent<Image>().color = Color.white;
+            btn.colors = colors;
     }
 }
     private IEnumerator PutarAudioSoalDenganDelay(AudioClip clip, float delay)
@@ -174,7 +181,9 @@ public class QuizManager : MonoBehaviour
 
         for (int i = 0; i < tombolJawaban.Count; i++)
         {
-            tombolJawaban[i].GetComponent<Image>().color = (i == index) ? Color.yellow : Color.white;
+            var btn = tombolJawaban[i];
+            if (i == index)
+            btn.Select();
         }
         string warnaDipilih = teksJawaban[index].text;
         PutarSuaraWarna(warnaDipilih);
@@ -186,11 +195,12 @@ public class QuizManager : MonoBehaviour
         imageJawaban.sprite = gambarJawabanBenar[randomIndex];
         imageJawaban.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
 
         imageJawaban.gameObject.SetActive(false);
         indexSoal++;
         TampilkanSoal();
+        ResetInputDanAktifkanTombol();
     }
 
 
@@ -199,43 +209,48 @@ public class QuizManager : MonoBehaviour
         int randomIndex = Random.Range(0, gambarJawabanSalah.Count);
         imageJawaban.sprite = gambarJawabanSalah[randomIndex];
         imageJawaban.gameObject.SetActive(true);
-        
-        yield return new WaitForSeconds(2);
-        
-        imageJawaban.gameObject.SetActive(false); 
-        indexSoal++; 
+
+        yield return new WaitForSeconds(2f);
+
+        imageJawaban.gameObject.SetActive(false);
+        indexSoal++;
         TampilkanSoal(); 
+        ResetInputDanAktifkanTombol();
     }
 
     public void SubmitJawaban()
     {
+        if (sudahSubmit)
+        {
+            Debug.Log("Jawaban sudah diproses!");
+            return;
+        }
+
         if (indexDipilih == -1)
         {
             Debug.Log("Belum memilih jawaban");
             return;
         }
 
+        sudahSubmit = true;
+
+        // Nonaktifkan semua tombol
+        foreach (var tombol in tombolJawaban)
+        {
+            tombol.interactable = false;
+        }
+        tombolSubmit.interactable = false;
+
         string jawabanPemain = teksJawaban[indexDipilih].text;
         bool benar = jawabanPemain == jawabanBenar;
 
-        // Cek apakah ini soal terakhir
         bool soalTerakhir = indexSoal >= 4;
 
         if (soalTerakhir)
         {
             if (benar) skor += 20;
-
-            // Langsung tampilkan skor tanpa coroutine
-            Debug.Log("Selesai! Skor akhir: " + skor);
             nilai.text = skor.ToString();
             pointImage.gameObject.SetActive(true);
-
-            // Nonaktifkan tombol-tombol jawaban
-            foreach (var tombol in tombolJawaban)
-            {
-                tombol.interactable = false;
-            }
-            tombolSubmit.interactable = false;
         }
         else
         {
@@ -254,6 +269,20 @@ public class QuizManager : MonoBehaviour
             }
         }
     }
+private void ResetInputDanAktifkanTombol()
+{
+    indexDipilih = -1;
+    sudahSubmit = false;
+
+    foreach (var tombol in tombolJawaban)
+    {
+        tombol.interactable = true;
+    }
+
+    tombolSubmit.interactable = true;
+}
+
+
     public void PutarSuaraWarna(string namaWarna)
     {
         WarnaData data = semuaWarna.Find(w => w.namaWarna == namaWarna);
