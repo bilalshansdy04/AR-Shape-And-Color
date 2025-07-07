@@ -16,9 +16,14 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(LoadSceneWithDelay("AR"));
     }
 
+    public void dragdrop()
+    {
+        SceneManager.LoadScene("DragDrop");
+    }
+
     private IEnumerator LoadSceneWithDelay(string sceneName)
     {
-        yield return new WaitForSeconds(delayBeforeLoad); 
+        yield return new WaitForSeconds(delayBeforeLoad);
         SceneManager.LoadScene(sceneName);
     }
 }
